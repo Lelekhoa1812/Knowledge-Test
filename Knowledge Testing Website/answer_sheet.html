@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Sheet</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid rgb(87, 4, 64);
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #9f98cf;
+        }
+    </style>
+</head>
+<body>
+    <h1>Answer Sheet</h1>
+    <table id="answerTable">
+        <tr>
+            <th>Question</th>
+            <th>Correct Answer</th>
+        </tr>
+        <!-- Table rows will be dynamically inserted here -->
+    </table>
+    <script>
+        // Retrieve data from localStorage
+        const answerData = JSON.parse(localStorage.getItem("answerData"));
+
+        // Populate table with answer data
+        const table = document.getElementById("answerTable");
+        if (answerData) {
+            answerData.forEach(answer => {
+                const row = table.insertRow(-1);
+                const questionCell = row.insertCell(0);
+                const correctAnswerCell = row.insertCell(1);
+                questionCell.textContent = answer.question;
+                correctAnswerCell.textContent = answer.correctAnswer;
+            });
+        } else {
+            // If no answer data found, display message
+            const row = table.insertRow(-1);
+            const noDataCell = row.insertCell(0);
+            noDataCell.colSpan = 2;
+            noDataCell.textContent = "No answer data available.";
+        }
+    </script>
+</body>
+</html>
