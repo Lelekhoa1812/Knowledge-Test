@@ -152,7 +152,7 @@
             methods: {
                 async fetchConcepts() {
                     // Fetch data from the python server
-                    const response = await fetch("http://localhost:8000/chemistry_concept.txt");
+                    const response = await fetch("chemistry_concept.txt");
                     // Parse the response JSON
                     const data = await response.json();
                     // Assign the fetched concepts to the data property
