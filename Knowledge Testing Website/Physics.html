@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Physics Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #071b2e; /* background */
+            color: #f5daf8dc; /* font color */
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ff6442; /* header */
+        }
+        p1 {
+            color: #a3aedc; /* description */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>25 Physics Questions</h1>
+        <div id="app">
+            <div v-if="!gameOver">
+                <p1>Physics problems gradually harder from grade 6 to year 11 level.</p1>
+                <div class="question">{{ currentQuestion }}</div>
+                <input type="number" v-model="userAnswer" placeholder="Enter your answer..." class="form-control">
+                <button v-on:click="submit()" class="btn btn-primary mt-3">Submit</button>
+                <button v-on:click="resetGame()" class="btn btn-primary mt-3">Reset</button>
+            </div>
+            <div v-else>
+                <h2>Game Over!</h2>
+                <p>Your score: {{ score }}/25</p>
+                <p v-if="score < 5">You need to practice more</p>
+                <p v-else-if="score >= 5 && score < 10">Good try but still need practice.</p>
+                <p v-else-if="score >= 10 && score < 15">Good attempt, keep learning.</p>
+                <p v-else-if="score >= 15 && score < 20">That's great, almost there.</p>
+                <p v-else-if="score >= 20 && score < 25">Fantastic, so close.</p>
+                <p v-else-if="score == 25">Awesome, you beat it!</p>
+                <button v-on:click="redirect()" class="btn btn-primary mt-3">Return</button>
+                <button v-on:click="showAnswerSheet()" class="btn btn-primary mt-3">Check Answer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    questions: [
+                    // Grade 6 Physics
+                    { question: "Calculate the force when mass is 10 kg and acceleration is 5 m/s².", correctAnswer: 50 },
+                    { question: "What is the velocity of an object that travels 200 meters in 20 seconds?", correctAnswer: 10 },
+                    { question: "If an object has a kinetic energy of 100 J and a mass of 5 kg, what is its velocity?", correctAnswer: 10 },
+                    { question: "Calculate the potential energy of an object with a mass of 2 kg and a height of 10 meters.", correctAnswer: 200 },
+                    { question: "Find the power if work is 500 J and time is 10 seconds.", correctAnswer: 50 },
+
+                        // Grade 7 Physics
+                        { question: "A car accelerates uniformly from rest to a speed of 20 m/s in 10 seconds. What is its acceleration?", correctAnswer: 2 },
+                        { question: "Calculate the force exerted by a machine that does 500 J of work in moving a load 5 meters.", correctAnswer: 100 },
+                        { question: "If a bicycle has a speed of 8 m/s and travels a distance of 400 meters, how long does it take?", correctAnswer: 50 },
+                        { question: "A ball is thrown vertically upward with an initial velocity of 20 m/s. How high does it go?", correctAnswer: 20 },
+                        { question: "What is the momentum of a 50 kg object moving with a velocity of 10 m/s?", correctAnswer: 500 },
+
+                        // Grade 8 Physics
+                        { question: "How much work is done when a force of 50 N is applied to move an object a distance of 10 meters?", correctAnswer: 500 },
+                        { question: "A cart moves with a velocity of 12 m/s and has a momentum of 240 kg·m/s. What is its mass?", correctAnswer: 20 },
+                        { question: "Calculate the total resistance in a circuit with resistors of 5Ω, 10Ω, and 15Ω connected in series.", correctAnswer: 30 },
+                        { question: "If the temperature increases from 20°C to 50°C, how much does it rise in Kelvin?", correctAnswer: 30 },
+                        { question: "A force of 100 N is applied to an object, moving it a distance of 5 meters. How much work is done?", correctAnswer: 500 },
+
+                        // Grade 9 Physics
+                        { question: "Calculate the frequency of a wave with a wavelength of 10 meters and a speed of 20 m/s.", correctAnswer: 2 },
+                        { question: "A car has an acceleration of 3 m/s². How much time does it take to reach a speed of 30 m/s from rest?", correctAnswer: 10 },
+                        { question: "What is the power of a machine that does 1000 J of work in 10 seconds?", correctAnswer: 100 },
+                        { question: "Calculate the mechanical advantage of a simple machine that requires 50 N of input force to lift a load with a force of 250 N.", correctAnswer: 5 },
+                        { question: "How much force is required to accelerate a 500 kg object at a rate of 5 m/s²?", correctAnswer: 2500 },
+
+                        // Grade 10 Physics
+                        { question: "A car travels at a speed of 30 m/s. If it accelerates uniformly at 2 m/s², how long does it take to reach a speed of 40 m/s?", correctAnswer: 5 },
+                        { question: "Calculate the electrical power consumed by a device with a resistance of 20Ω and a current of 5A.", correctAnswer: 100 },
+                        { question: "What is the period of a pendulum with a length of 2 meters?", correctAnswer: 2 },
+                        { question: "If a force of 200 N is applied to move an object a distance of 10 meters, how much work is done?", correctAnswer: 2000 },
+                        { question: "Calculate the speed of a wave with a frequency of 10 Hz and a wavelength of 5 meters.", correctAnswer: 50 },
+
+                        // Grade 11 Physics
+                        { question: "A particle travels with an initial velocity of 10 m/s and accelerates at 2 m/s². What is its final velocity after 5 seconds?", correctAnswer: 20 },
+                        { question: "Calculate the resistance of a wire if a current of 2A flows through it and the voltage across it is 10V.", correctAnswer: 5 },
+                        { question: "What is the gravitational potential energy of a 10 kg object at a height of 20 meters?", correctAnswer: 2000 },
+                        { question: "If an object has a speed of 5 m/s and a mass of 10 kg, what is its kinetic energy?", correctAnswer: 125 },
+                        { question: "A force of 50 N is applied to an object, moving it a distance of 8 meters. How much work is done?", correctAnswer: 400 }
+                        ],
+                    currentQuestionIndex: 0,
+                    userAnswer: null,
+                    score: 0,
+                    gameOver: false
+                };
+            },
+            computed: {
+                currentQuestion() {
+                    return this.questions[this.currentQuestionIndex].question;
+                }
+            },
+            methods: {
+                submit() {
+                    this.checkAnswer();
+                    this.nextround();
+                },
+                checkAnswer() {
+                    const correctAnswer = this.questions[this.currentQuestionIndex].correctAnswer;
+                    if (this.userAnswer === correctAnswer) {
+                        this.score++;
+                        this.userAnswer = null;
+                    }
+                    this.currentQuestionIndex++;
+                    if (this.currentQuestionIndex === this.questions.length) {
+                        this.gameOver = true;
+                        this.userAnswer = null;
+                    }
+                },
+                showAnswerSheet() {
+                    // Prepare data for the answer sheet
+                    const answerData = this.questions.map(question => ({
+                        question: question.question,
+                        correctAnswer: question.correctAnswer
+                    }));
+
+                    // Store the answer data in localStorage
+                    localStorage.setItem("answerData", JSON.stringify(answerData));
+
+                    // Open answer sheet
+                    window.location.href = "answer_sheet.html";
+                },
+                nextround() {
+                    this.userAnswer = null;
+                },
+                resetGame() {
+                    this.currentQuestionIndex = 0;
+                    this.userAnswer = null;
+                    this.score = 0;
+                    this.gameOver = false;
+                },
+                redirect() {
+                    window.location.replace("Edu_Test.html");
+                }
+            }
+        });
+        app.mount('#app');
+    </script>
+</body>
+</html>

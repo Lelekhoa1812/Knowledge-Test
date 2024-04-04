@@ -1,0 +1,352 @@
+[
+  {
+    "grade": "6",
+    "type": "Theory",
+    "concept": "Newton's first law of motion: An object at rest remains at rest, or if in motion, remains in motion at a constant velocity unless acted on by a net external force."
+  },
+  {
+    "grade": "6",
+    "type": "Theory",
+    "concept": "Types of Energy: Kinetic, Potential, Mechanical, Heat, Light, Sound."
+  },
+  {
+    "grade": "6",
+    "type": "Theory",
+    "concept": "Simple Machines: Lever, Pulley, Wheel and Axle, Inclined Plane, Wedge, Screw."
+  },
+  {
+    "grade": "6",
+    "type": "Theory",
+    "concept": "Types of Forces: Gravity, Friction, Magnetic, Electrical."
+  },
+  {
+    "grade": "6",
+    "type": "Theory",
+    "concept": "Measurement and Units: Length, Mass, Time, Volume, Density, Speed."
+  },
+  {
+    "grade": "6",
+    "type": "Formula",
+    "concept": "Force = Mass × Acceleration (F = ma)"
+  },
+  {
+    "grade": "6",
+    "type": "Formula",
+    "concept": "Work = Force × Distance (W = Fd)"
+  },
+  {
+    "grade": "6",
+    "type": "Formula",
+    "concept": "Kinetic Energy = 0.5 × Mass × Velocity^2 (KE = 0.5mv^2)"
+  },
+  {
+    "grade": "6",
+    "type": "Formula",
+    "concept": "Gravitational Potential Energy = Mass × Gravity × Height (PE = mgh)"
+  },
+  {
+    "grade": "6",
+    "type": "Formula",
+    "concept": "Density = Mass / Volume (ρ = m/V)"
+  },
+  {
+    "grade": "7",
+    "type": "Theory",
+    "concept": "Light: Reflection, Refraction, Dispersion."
+  },
+  {
+    "grade": "7",
+    "type": "Theory",
+    "concept": "Newton's second law states that the acceleration of an object is directly related to the net force and inversely related to its mass."
+  },
+  {
+    "grade": "7",
+    "type": "Theory",
+    "concept": "Electricity: Circuits, Conductors, Insulators, Ohm's Law."
+  },
+  {
+    "grade": "7",
+    "type": "Theory",
+    "concept": "Magnetism: Magnetic Fields, Magnetic Force, Electromagnetism."
+  },
+  {
+    "grade": "7",
+    "type": "Theory",
+    "concept": "Heat Transfer: Conduction, Convection, Radiation."
+  },
+  {
+    "grade": "7",
+    "type": "Formula",
+    "concept": "Speed = Distance / Time (v = d/t)"
+  },
+  {
+    "grade": "7",
+    "type": "Formula",
+    "concept": "Acceleration = Change in Velocity / Time (a = Δv/t)"
+  },
+  {
+    "grade": "7",
+    "type": "Formula",
+    "concept": "Force = Spring Constant × Displacement (F = kx)"
+  },
+  {
+    "grade": "7",
+    "type": "Formula",
+    "concept": "Ohm's Law: Voltage = Current × Resistance (V = IR)"
+  },
+  {
+    "grade": "7",
+    "type": "Formula",
+    "concept": "Momentum: Momentum = mass x velocity (p = mv)"
+  },
+  {
+    "grade": "8",
+    "type": "Theory",
+    "concept": "Waves: Types, Properties, Wave Behavior."
+  },
+  {
+    "grade": "8",
+    "type": "Theory",
+    "concept": "Optics: Lenses, Mirrors, Snell's Law."
+  },
+  {
+    "grade": "8",
+    "type": "Theory",
+    "concept": "Electricity and Magnetism: Electromagnetic Induction, Faraday's Law. Whenever a conductor is placed in a varying magnetic field, an electromotive force is induced."
+  },
+  {
+    "grade": "8",
+    "type": "Theory",
+    "concept": "Energy: Conservation of Energy, Energy Transformation."
+  },
+  {
+    "grade": "8",
+    "type": "Theory",
+    "concept": "Fluid Dynamics: Pressure, Buoyancy, Bernoulli's Principle. The pressure in a fluid decreases as the fluid's velocity increases."
+  },
+  {
+    "grade": "8",
+    "type": "Formula",
+    "concept": "Wave Speed = Frequency × Wavelength (v = fλ)"
+  },
+  {
+    "grade": "8",
+    "type": "Formula",
+    "concept": "Index of Refraction = Speed of Light in Vacuum / Speed of Light in Material (n = c/v)"
+  },
+  {
+    "grade": "8",
+    "type": "Formula",
+    "concept": "Faraday's Law of Electromagnetic Induction: EMF = -N ΔΦ/Δt"
+  },
+  {
+    "grade": "8",
+    "type": "Formula",
+    "concept": "Conservation of Energy: Total Energy = Kinetic Energy + Potential Energy (E = KE + PE)"
+  },
+  {
+    "grade": "8",
+    "type": "Formula",
+    "concept": "Pressure = Force / Area (P = F/A)"
+  },
+  {
+    "grade": "9",
+    "type": "Theory",
+    "concept": "Gravity: Gravitational Force, Orbits, Kepler's Laws."
+  },
+  {
+    "grade": "9",
+    "type": "Theory",
+    "concept": "Atomic Structure: Subatomic Particles, Electron Configuration."
+  },
+  {
+    "grade": "9",
+    "type": "Theory",
+    "concept": "Thermodynamics: Laws, Heat Engines, Entropy. Describe how the energy in a system changes and whether the system can perform useful work on its surroundings."
+  },
+  {
+    "grade": "9",
+    "type": "Theory",
+    "concept": "Electric Circuits: Kirchhoff's Laws, Series and Parallel Circuits."
+  },
+  {
+    "grade": "9",
+    "type": "Theory",
+    "concept": "Wave Behaviour: Interference, Diffraction, Polarisation."
+  },
+  {
+    "grade": "9",
+    "type": "Formula",
+    "concept": "Gravitational Force = G × (m1 × m2) / r^2"
+  },
+  {
+    "grade": "9",
+    "type": "Formula",
+    "concept": "Bohr's Model: Energy Levels = -13.6eV / n^2"
+  },
+  {
+    "grade": "9",
+    "type": "Formula",
+    "concept": "First Law of Thermodynamics: ΔU = Q - W"
+  },
+  {
+    "grade": "9",
+    "type": "Formula",
+    "concept": "Heat of Fusion: q = m * ΔHF"
+  },
+  {
+    "grade": "9",
+    "type": "Formula",
+    "concept": "Latent Heat: L = Q / M"
+  },
+  {
+    "grade": "10",
+    "type": "Theory",
+    "concept": "Electromagnetism: Maxwell's Equations, Electromagnetic Waves. c = 1√μ0ϵ0."
+  },
+  {
+    "grade": "10",
+    "type": "Theory",
+    "concept": "Quantum Mechanics: Wave-Particle Duality, Heisenberg Uncertainty Principle."
+  },
+  {
+    "grade": "10",
+    "type": "Theory",
+    "concept": "Special Relativity: Time Dilation, Length Contraction, Mass-Energy Equivalence."
+  },
+  {
+    "grade": "10",
+    "type": "Theory",
+    "concept": "Nuclear Physics: Nuclear Decay, Radioactive Half-Life, Nuclear Reactions."
+  },
+  {
+      "grade": "10",
+      "type": "Theory",
+      "concept": "Astrophysics: Stellar Evolution, Cosmology, Black Holes. Stellar-mass black holes likely originated as mismatched stars where the more massive one evolved rapidly into a black hole."
+  },
+  {
+    "grade": "10",
+    "type": "Formula",
+    "concept": "Maxwell's Equations: ∇⋅E = ρ/ε0, ∇⋅B = 0, ∇×E = -∂B/∂t, ∇×B = μ0J + μ0ε0 ∂E/∂t"
+  },
+  {
+    "grade": "10",
+    "type": "Formula",
+    "concept": "de Broglie Wavelength: λ = h / p"
+  },
+  {
+    "grade": "10",
+    "type": "Formula",
+    "concept": "Time Dilation: Δt' = Δt / √(1 - v^2/c^2)"
+  },
+  {
+    "grade": "10",
+    "type": "Formula",
+    "concept": "Half-Life: t1/2 = (ln 2) / λ"
+  },
+  {
+    "grade": "10",
+    "type": "Formula",
+    "concept": "Schwarzschild Radius: Rs = 2GM / c^2"
+  },
+  {
+    "grade": "11",
+    "type": "Theory",
+    "concept": "Particle Physics: Standard Model, Fundamental Forces."
+  },
+  {
+    "grade": "11",
+    "type": "Theory",
+    "concept": "String Theory: Extra Dimensions, Vibrating Strings."
+  },
+  {
+    "grade": "11",
+    "type": "Theory",
+    "concept": "Cosmology: Big Bang Theory, Dark Matter, Dark Energy. Dark matter governs the cosmos, forming galaxies and galaxy clusters; dark energy control the future, pushing galaxies farther apart"
+  },
+  {
+    "grade": "11",
+    "type": "Theory",
+    "concept": "Quantum Field Theory: Field Particles, Quantum Fluctuations. Quantum fluctuation is the temporary random change in the amount of energy in a point in space,"
+  },
+  {
+    "grade": "11",
+    "type": "Theory",
+    "concept": "General Relativity: Curved Spacetime, Gravitational Waves."
+  },
+  {
+    "grade": "11",
+    "type": "Formula",
+    "concept": "Standard Model: Describes Electromagnetic, Weak, and Strong Nuclear Interactions."
+  },
+  {
+    "grade": "11",
+    "type": "Formula",
+    "concept": "String Tension: T = (F/A) × L"
+  },
+  {
+    "grade": "11",
+    "type": "Formula",
+    "concept": "Critical Density: ρc = 3H^2 / 8πG"
+  },
+  {
+    "grade": "11",
+    "type": "Formula",
+    "concept": "Vacuum Energy: E = ħ × ω / 2"
+  },
+  {
+    "grade": "11",
+    "type": "Formula",
+    "concept": "Einstein Field Equations: Gμν = 8πGTμν"
+  },
+  {
+    "grade": "12",
+    "type": "Theory",
+    "concept": "Black Hole Thermodynamics: Hawking Radiation, Entropy of Black Holes."
+  },
+  {
+    "grade": "12",
+    "type": "Theory",
+    "concept": "Grand Unified Theory (GUT): Unification of Fundamental Forces."
+  },
+  {
+    "grade": "12",
+    "type": "Theory",
+    "concept": "Multiverse Theory: Parallel Universes, Cosmic Inflation."
+  },
+  {
+    "grade": "12",
+    "type": "Theory",
+    "concept": "Quantum Gravity: Unified Theory of Gravity and Quantum Mechanics."
+  },
+  {
+    "grade": "12",
+    "type": "Theory",
+    "concept": "Extra Dimensions: Kaluza-Klein Theory, String Theory."
+  },
+  {
+    "grade": "12",
+    "type": "Formula",
+    "concept": "Hawking Radiation: L = (ħc^3) / (16πGM^2)"
+  },
+  {
+    "grade": "12",
+    "type": "Formula",
+    "concept": "GUT Energy Scale: ΛGUT ≈ 10^16 GeV"
+  },
+  {
+    "grade": "12",
+    "type": "Formula",
+    "concept": "Multiverse Probability: P = ∫ |Ψ|^2 dV"
+  },
+  {
+    "grade": "12",
+    "type": "Formula",
+    "concept": "Quantum Gravity Energy: E = ħc^5 / (32πGħ)"
+  },
+  {
+    "grade": "12",
+    "type": "Formula",
+    "concept": "Kaluza-Klein Compactification: R = r0 + α' ln(M^2 r0)"
+  }
+]
