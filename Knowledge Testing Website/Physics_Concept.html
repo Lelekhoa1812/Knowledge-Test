@@ -153,7 +153,7 @@
             methods: {
                 async fetchConcepts() {
                     // Fetch data from the python server
-                    const response = await fetch("http://localhost:8000/physics_concept.json");
+                    const response = await fetch("python HTTP server/physics_concept.json");
                     // Parse the response JSON
                     const data = await response.json();
                     // Assign the fetched concepts to the data property
