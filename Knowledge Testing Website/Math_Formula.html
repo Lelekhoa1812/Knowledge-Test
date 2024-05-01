@@ -154,7 +154,7 @@
         methods: {
           async fetchFormulas() {
             // Fetch data from the python server
-            const response = await fetch("http://localhost:8000/math_formula.json");
+            const response = await fetch("python HTTP server/math_formula.json");
             // Parse the response JSON
             const data = await response.json();
             // Assign the fetched formulas to the data property
