@@ -12,9 +12,12 @@ Classroom:
 1. Math formulas (Algebra and Calculus grade 6-12)
 2. Physics theory and formula sheet (grade 6-12)
 3. Chemistry theory and formula sheet (grade 6-12)
+4. Website to learn guitar (Fretboard)
+5. Contribution (where you contribute your own knowledge, CRUD by and on MariaDB.
 
 Social Media:
-1. Feedback creation
+1. Feedback page
+2. Forum page
 
 Credential logins:
 1. Credential validation
@@ -26,5 +29,9 @@ Username: liam2003
 Email: liam@gmail.com
 Password: Kho@le2003
 
-A product of COS30043 unit, Swinburne semester 1, 2024.
+Data storage:
+1. Where is localStorage stored? In Google Chrome, web storage data is saved in an SQLite file in a subfolder in the user's profile.
+2. Data also saved as SQL table via MariaDB. (account s103844421)
+3. 
+A product of COS30043 unit, Swinburne semester 1, 2024
 (https://lelekhoa1812.github.io/Knowledge-Test/Knowledge%20Testing%20Website/Credential.html)
