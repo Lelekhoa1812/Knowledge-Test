@@ -36,7 +36,7 @@ Data storage:
 2. Data also saved as SQL table via MariaDB. (account s103844421)
    
 A product of COS30043 unit, Swinburne semester 1, 2024
-GitHub page accessibility:
+1. GitHub page accessibility:
 (https://lelekhoa1812.github.io/Knowledge-Test/Knowledge%20Testing%20Website/Credential.html)
-Mercury server accessibility:
+2. Mercury server accessibility:
 https://mercury.swin.edu.au/cos30043/s103844421/COS30043/Knowledge%20Testing%20Website/Credential.html
