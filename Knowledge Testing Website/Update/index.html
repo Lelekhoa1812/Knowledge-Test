@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Knowledge Contribution</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+	<link href="css/vuetify.min.css" rel="stylesheet" />
+
+	<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="css/font.css" rel="stylesheet" />
+</head>
+
+<body>
+	<!-- creating an app div -->
+	<div id="app">
+		<v-app id="inspire">
+			<v-main>
+				<v-container>
+
+					<v-app-bar v-if="authenticated">
+						<app-nav></app-nav>
+					</v-app-bar>
+
+					<router-view @authenticated="setAuthenticated" />
+					<!-- Creating the component -->
+					<router-view></router-view>
+				</v-container>
+			</v-main>
+		</v-app>
+
+	</div>
+
+
+	<!-- Load Basic Vue JS file-->
+	<script src="js/vue.js"></script>
+
+	<!-- Load Vuetify JS file-->
+	<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+
+	<!-- Load Vue Router JS file-->
+	<script src="js/vue-router.js"></script>
+
+	<!-- Load Vue Paginate JS file-->
+	<script src="js/vuejs-paginate.js"></script>
+
+
+	<!-- Load the custom component js files -->
+	<script src="js/components/app-dashboard.js"></script>
+	<script src="js/components/app-read.js"></script>
+	<script src="js/components/app-delete.js"></script>
+	<script src="js/components/app-post.js"></script>
+	<script src="js/components/app-update.js"></script>
+	<script src="js/components/app-login.js"></script>
+
+	<!-- Load the custom main js file -->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
