@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="lb.png" >
+    <link rel="stylesheet" href="Social_Media/main.css">
+    <script src="Social_Media/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Social Forum</title>
+    <style>
+        .return-btn {
+            background-color: #e7e7e7;
+            color: rgb(2, 14, 57);
+            padding: 10px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        .return-btn:hover {
+            background-color: #b4b4b4;
+        }
+        .return-btn::before {
+            content: "<-";
+            font-size: 18px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .submit-btn {
+            background-color: #6ac66f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .submit-btn:hover {
+            background-color: #0d450f;
+        }
+        .refresh-btn {
+            background-color: #f15757;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .refresh-btn:hover {
+            background-color: #820b0b;
+        }
+        .clear-btn {
+            background-color: #fcbc56;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            border-radius: 5px;
+            top: 664px;
+            left: 1020px;
+        }
+        .clear-btn:hover {
+            background-color: #945304;
+        }
+        .user-id {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: rgb(29, 2, 53);
+            font-size: 18px;
+        }
+        .caption-box {
+            height: 400px; 
+            width: 100%;
+        }
+        #displayCaption div {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-bottom: 5px;
+        }
+        #displayCaption img {
+            width: 20%; /* Scale images down to 20% */
+            height: 20%;
+        }
+        .caption-text {
+            margin-top: 5px;
+        }
+        p {
+            color: #480028; /* Description */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Social Forum</h1>
+        <p>This forum is a discussion page where you can interact with other users, send your progression with the education webpage and ask any question about it.</p>
+        <!-- Display userid -->
+        <div class="user-id">{{ userid }}</div>
+        <div class="caption-box" id="displayCaption">
+            <!-- Display caption -->
+        </div>
+        <!-- Image upload input, reference from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_file_upload_button -->
+        <input type="file" id="imageUpload" accept="image/*"><br>
+        <!-- Caption input -->
+        <textarea id="userCaption" class="caption-box" placeholder="Insert your caption here..." style="height: 100px;"></textarea><br> <!-- Smaller vertically -->
+        <button onclick="submitCaption()" class="submit-btn">Submit</button>
+        <button onclick="refreshCaption()" class="refresh-btn">Refresh</button>
+    </div>
+    <button onclick="redirect()" class="return-btn"></button>
+    <button onclick="clearCaption()" class="clear-btn">Clear Page</button>
+    <script src="vue.js"></script>
+    <script>
+        const userid = localStorage.getItem('userid'); // Retrieve userid from localStorage
+        document.querySelector('.user-id').textContent = '@' + userid; // Display userid 
+        
+        // Retrieve caption from localStorage when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const storedCaption = JSON.parse(localStorage.getItem('storedCaption')) || [];
+            const displayCaption = document.getElementById('displayCaption');
+            
+            storedCaption.forEach(caption => {
+                const captionData = caption.split('\n');
+                const captionNode = document.createElement('div');
+                const imageNode = document.createElement('img');
+                const textNode = document.createElement('div');
+                textNode.className = 'caption-text';
+                textNode.textContent = captionData[0];
+                imageNode.src = captionData[1];
+                captionNode.appendChild(imageNode);
+                captionNode.appendChild(textNode);
+                
+                displayCaption.appendChild(captionNode);
+            });
+        });
+
+        // Submit caption
+        function submitCaption() {
+            const userCaption = document.getElementById('userCaption').value;
+            const displayCaption = document.getElementById('displayCaption');
+            const fileInput = document.getElementById('imageUpload');
+            
+            // Check if an image is selected
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+                
+                reader.onload = function(event) {
+                    const imageSrc = event.target.result;
+                    
+                    // Construct format
+                    const caption = `@${userid}: ${userCaption}\n${imageSrc}`;
+                    
+                    const captionNode = document.createElement('div');
+                    const imageNode = document.createElement('img');
+                    const textNode = document.createElement('div');
+                    textNode.className = 'caption-text';
+                    textNode.textContent = `@${userid}: ${userCaption}`;
+                    imageNode.src = imageSrc;
+                    imageNode.width = 50; // Set image width
+                    imageNode.height = 50; // Set image height
+                    captionNode.appendChild(imageNode);
+                    captionNode.appendChild(textNode);
+                    displayCaption.appendChild(captionNode);
+
+                    // Save caption to localStorage
+                    const storedCaption = JSON.parse(localStorage.getItem('storedCaption')) || [];
+                    storedCaption.push(caption);
+                    localStorage.setItem('storedCaption', JSON.stringify(storedCaption));
+                };
+                
+                reader.readAsDataURL(file);
+                
+                // Clear text input field after submission
+                document.getElementById('userCaption').value = '';
+                // Clear file input field after submission
+                fileInput.value = '';
+            } else {
+                alert('Please select an image.');
+            }
+        }
+
+        // Reset caption entry (not submitted)
+        function refreshCaption() {
+            document.getElementById('userCaption').value = '';
+            // Clear file input field
+            document.getElementById('imageUpload').value = '';
+        }
+
+        // Clear all captions in the chatbox
+        function clearCaption() {
+            localStorage.removeItem('storedCaption'); // Remove stored caption from localStorage
+            document.getElementById('displayCaption').innerHTML = '';
+        }
+
+        function redirect() {
+            window.location.href = 'Edu_Test.html';
+        }
+    </script>
+</body>
+</html>
