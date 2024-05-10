@@ -13,8 +13,7 @@ Classroom:
 2. Physics theory and formula sheet (grade 6-12, has lookup elements)
 3. Chemistry theory and formula sheet (grade 6-12, has lookup elements)
 4. Explore flag (table with tickbox lookup element to search for a specific country's flag)
-5. Website to learn guitar (Fretboard)
-6. Contribution (where you contribute your own knowledge (subject, any topic, any grade), 'CRUD' by and on MariaDB - read from apis.php).
+5. Contribution (where you contribute your own knowledge (subject, any topic, any grade), 'CRUD' by and on MariaDB - read from apis.php).
 
 Social Media:
 1. Feedback page (post message only)
