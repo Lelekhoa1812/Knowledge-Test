@@ -56,7 +56,7 @@ Vue.component('app-putdata', {
 
     putData: function(subjectgrade, description, username) {
 
-      var putSQLApiURL = 'resources/apis.php/subjectgrade/' + subjectgrade + 'resources/apis.php/username/' + username;
+      var putSQLApiURL = 'resources/apis.php/subjectgrade/' + subjectgrade + '/username/' + username;
 
 
       var self = this;
