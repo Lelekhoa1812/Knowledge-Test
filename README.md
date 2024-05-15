@@ -1,7 +1,7 @@
 # Knowledge-Test
 Educational Website 
 
-Include Tests
+Questionnaires:
 1. 40 questions about Vietnam (mult choice, related to Food, History, Geography and Landscape topics)
 2. 40 questions about Australia (mult choice, related to Food, History, Geography and Landscape topics)
 3. 25 Questions about Math (grade 6-11)
@@ -24,7 +24,7 @@ Credential logins:
 2. Create new accounts (saved to localStorage under a user - variable)
 3. Contribution's validation process (extract data from a user to validate username and password).
 
-Instruction
+Instruction:
 Access the Credential file, log in by your own created account or one of the pre-created one below:
 Username: liam2003
 Email: liam@gmail.com
@@ -35,7 +35,11 @@ Data storage:
 2. Data also saved as SQL table via MariaDB. (account s103844421)
    
 A product of COS30043 unit, Swinburne semester 1, 2024
-1. GitHub page accessibility:
-(https://lelekhoa1812.github.io/Knowledge-Test/Knowledge%20Testing%20Website/Credential.html)
-2. Mercury server accessibility:
+1. Mercury server accessibility:
 https://mercury.swin.edu.au/cos30043/s103844421/COS30043/Knowledge%20Testing%20Website/Credential.html
+Important Notice: The Contribution feature can ONLY being used from using Mercury server link. If you would like to access them, logged to this Mercury credential information upon request:
+Username:  s103844421
+Password: Kho@le2003
+
+2. GitHub page accessibility:
+(https://lelekhoa1812.github.io/Knowledge-Test/Knowledge%20Testing%20Website/Credential.html)
