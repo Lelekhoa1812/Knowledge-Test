@@ -37,9 +37,6 @@ Data storage:
 A product of COS30043 unit, Swinburne semester 1, 2024
 1. Mercury server accessibility:
 https://mercury.swin.edu.au/cos30043/s103844421/COS30043/Knowledge%20Testing%20Website/Credential.html
-Important Notice: The Contribution feature can ONLY being used from using Mercury server link. If you would like to access them, logged to this Mercury credential information upon request:
-Username:  s103844421
-Password: Kho@le2003
-
+Important Notice: The Contribution feature can ONLY being used from using Mercury server link. If you would like to access them, contact me for the Mercury credential information.
 2. GitHub page accessibility:
 (https://lelekhoa1812.github.io/Knowledge-Test/Knowledge%20Testing%20Website/Credential.html)
